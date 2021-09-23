@@ -33,7 +33,7 @@ alter table customers
 add column calidad varchar(7) default 'regular';
 
 alter table customers
-add constraint CK_customers_calidad check (calidad in ('bueno', 'regular', 'malo'); 
+add constraint CK_customers_calidad check (calidad in ('bueno', 'regular', 'malo')); 
 
 --¿Qué colaboradores chambearon durante las fiestas de navidad?
 select e.first_name, e.last_name 
