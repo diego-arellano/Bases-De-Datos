@@ -34,7 +34,7 @@ join customer c on(r.customer_id = c.customer_id)
 where c.last_name like '_A%W%';
 ```
 
-###Construyan un query que regrese emails inválidos de la tabla dada
+Construyan un query que regrese emails inválidos de la tabla dada
 
 ```sql
 create table correos.superheroes (
