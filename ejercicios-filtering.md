@@ -1,6 +1,6 @@
-#Ejercicios filtering 
+Ejercicios filtering 
 
-###¿Cuáles pagos no son del cliente con ID 5, y cuyo monto sea mayor a 8 o cuya fecha sea 23 de Agosto de 2005?
+¿Cuáles pagos no son del cliente con ID 5, y cuyo monto sea mayor a 8 o cuya fecha sea 23 de Agosto de 2005?
 
 ```sql
 select *
@@ -8,7 +8,7 @@ from  payment p
 where p.customer_id != 5 and (p.amount > 8 or p.payment_date between '2005-08-23 00:00:00' and '2005-08-23 23:59:59');
 ```
 
-###¿Cuáles pagos son del cliente con ID 5 y cuyo monto no sea mayor a 6 y su fecha tampoco sea del 19 de Junio de 2005?
+¿Cuáles pagos son del cliente con ID 5 y cuyo monto no sea mayor a 6 y su fecha tampoco sea del 19 de Junio de 2005?
 
 ```sql
 select *
@@ -17,7 +17,7 @@ where p.customer_id = 5 and p.amount <= 6 and p.payment_date not between '2005-0
 ```
 
 
-###¿Cuáles pagos tienen el monto 1.98, 7.98 o 9.98?
+¿Cuáles pagos tienen el monto 1.98, 7.98 o 9.98?
 
 ```sql
 select *
@@ -25,7 +25,7 @@ from payment p
 where p.amount in (1.98,7.98,9.98);
 ```
 
-###¿Cuáles la suma total pagada por los clientes que tienen una letra A en la segunda posición de su apellido y una W en cualquier lugar después de la A?
+¿Cuál es la suma total pagada por los clientes que tienen una letra A en la segunda posición de su apellido y una W en cualquier lugar después de la A?
 
 ```sql
 select sum(p.amount)
