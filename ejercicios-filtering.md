@@ -64,7 +64,15 @@ insert into correos.superheroes(nombre, email) values
 ('Gamora', 'thefiercestwomaninthegalaxy@thanos.'),
 ('Rocket', 'shhhhhhhh@darknet.ru');
 
+--emails inválidos
 select s.email 
 from correos.superheroes s 
-where s.email not like '%@%.__%';
+where s.email not like '%@%.__%' 
+or s.email like '%@%.%.%';
+
+--emails válidos
+select s.email 
+from correos.superheroes s 
+where s.email like '%@%.__%' 
+and s.email not like '%@%.%.%';
 ```
