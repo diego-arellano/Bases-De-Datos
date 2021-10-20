@@ -1,4 +1,4 @@
-### Diego Arellano Zamudio
+#### Diego Arellano Zamudio
 Ejercicios Group By III
 
 ¿Cómo obtenemos todos los nombres y correos de nuestros clientes canadienses para una campaña?
