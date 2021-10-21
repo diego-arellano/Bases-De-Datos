@@ -26,12 +26,13 @@ limit 1;
 ### ¿Qué películas son las más rentadas en todas nuestras stores?
 
 ```sql
-select distinct on(i.store_id) i.store_id,a.address, f.title, count(f.film_id)
+select distinct on(i.store_id) i.store_id, c.city, f.title, count(f.film_id)
 from film f join inventory i using(film_id)
 join rental r using(inventory_id)
 join store s using (store_id)
 join address a using (address_id)
-group by i.store_id, a.address, f.film_id 
+join city c using (city_id)
+group by i.store_id, c.city, f.film_id 
 order by i.store_id, count(f.film_id) desc;
 ```
 
